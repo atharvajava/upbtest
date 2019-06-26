@@ -11,7 +11,8 @@ class Index extends React.Component {
         this.setState({
             time: this.state.time,
             start: Date.now() - this.state.time,
-            isOn: true
+            isOn: true,
+            clicks:1
         })
         this.timer = setInterval(() => this.setState({
           time: Date.now() - this.state.start
@@ -20,12 +21,19 @@ class Index extends React.Component {
 
 
       stopTimer() {
-        this.setState({isOn: false})
+        this.setState({isOn: false,clicks:1})
         clearInterval(this.timer)
       }
 
       resetTimer() {
         this.setState({time: 0})
+      }
+
+      lapTimer() {
+        if(this.state.clicks<= 5) {
+           this.setState({clicks: this.state.clicks+1})
+           localStorage.setItem(this.state.clicks,this.state.time)
+        }
       }
 
 
@@ -71,11 +79,13 @@ class Index extends React.Component {
         this.setState({
             time: 0,
             start: 0,
-            isOn: false
+            isOn: false,
+            clicks:1,
           });
        this.startTimer = this.startTimer.bind(this)
         this.stopTimer = this.stopTimer.bind(this)
         this.resetTimer = this.resetTimer.bind(this)
+        this.lapTimer = this.lapTimer.bind(this)
      }
 
     
@@ -113,6 +123,12 @@ class Index extends React.Component {
             {resume}
             {stop}
             {reset}
+            <Button color="primary"  onClick={this.lapTimer}>Lap</Button>
+            <span>{localStorage.getItem(1)}</span><br/>
+            <span>{localStorage.getItem(2)}</span><br/>
+            <span>{localStorage.getItem(3)}</span><br/>
+            <span>{localStorage.getItem(4)}</span><br/>
+            <span>{localStorage.getItem(5)}</span><br/>
         </React.Fragment>)
     }
 }

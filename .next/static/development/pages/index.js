@@ -35761,7 +35761,8 @@ function (_React$Component) {
       this.setState({
         time: this.state.time,
         start: _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_0___default()() - this.state.time,
-        isOn: true
+        isOn: true,
+        clicks: 1
       });
       this.timer = setInterval(function () {
         return _this.setState({
@@ -35773,7 +35774,8 @@ function (_React$Component) {
     key: "stopTimer",
     value: function stopTimer() {
       this.setState({
-        isOn: false
+        isOn: false,
+        clicks: 1
       });
       clearInterval(this.timer);
     }
@@ -35783,6 +35785,16 @@ function (_React$Component) {
       this.setState({
         time: 0
       });
+    }
+  }, {
+    key: "lapTimer",
+    value: function lapTimer() {
+      if (this.state.clicks <= 5) {
+        this.setState({
+          clicks: this.state.clicks + 1
+        });
+        localStorage.setItem(this.state.clicks, this.state.time);
+      }
     }
   }, {
     key: "setTime",
@@ -35836,11 +35848,13 @@ function (_React$Component) {
       this.setState({
         time: 0,
         start: 0,
-        isOn: false
+        isOn: false,
+        clicks: 1
       });
       this.startTimer = this.startTimer.bind(this);
       this.stopTimer = this.stopTimer.bind(this);
       this.resetTimer = this.resetTimer.bind(this);
+      this.lapTimer = this.lapTimer.bind(this);
     }
   }, {
     key: "render",
@@ -35849,7 +35863,7 @@ function (_React$Component) {
         onClick: this.startTimer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 98
         },
         __self: this
       }, "start") : null;
@@ -35857,7 +35871,7 @@ function (_React$Component) {
         onClick: this.stopTimer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 101
         },
         __self: this
       }, "stop") : null;
@@ -35865,7 +35879,7 @@ function (_React$Component) {
         onClick: this.resetTimer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 104
         },
         __self: this
       }, "reset") : null;
@@ -35873,33 +35887,33 @@ function (_React$Component) {
         onClick: this.startTimer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 107
         },
         __self: this
       }, "resume") : null;
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 110
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
         color: "primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 112
         },
         __self: this
       }, "Timer Project"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 115
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 116
         },
         __self: this
       }, "Real - Time : "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_live_clock__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -35908,16 +35922,84 @@ function (_React$Component) {
         timezone: 'Europe/Berlin',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 117
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 121
         },
         __self: this
-      }, "timer: ", pretty_ms__WEBPACK_IMPORTED_MODULE_9___default()(this.state.time)), start, resume, stop, reset);
+      }, "timer: ", pretty_ms__WEBPACK_IMPORTED_MODULE_9___default()(this.state.time)), start, resume, stop, reset, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+        color: "primary",
+        onClick: this.lapTimer,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }, "Lap"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 127
+        },
+        __self: this
+      }, localStorage.getItem(1)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 127
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 128
+        },
+        __self: this
+      }, localStorage.getItem(2)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 128
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      }, localStorage.getItem(3)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
+        },
+        __self: this
+      }, localStorage.getItem(4)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        },
+        __self: this
+      }, localStorage.getItem(5)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        },
+        __self: this
+      }));
     }
   }]);
 
