@@ -104,6 +104,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/date/now */ "core-js
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/create.js ***!
@@ -134,6 +145,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype-of */ "core-js/library/fn/object/get-prototype-of");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
 
 /***/ }),
 
@@ -401,23 +423,29 @@ function _typeof(obj) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/date/now */ "./node_modules/@babel/runtime-corejs2/core-js/date/now.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reactstrap */ "reactstrap");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ "./node_modules/bootstrap/dist/css/bootstrap.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var pretty_ms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! pretty-ms */ "pretty-ms");
-/* harmony import */ var pretty_ms__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(pretty_ms__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_live_clock__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-live-clock */ "react-live-clock");
-/* harmony import */ var react_live_clock__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_live_clock__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/date/now */ "./node_modules/@babel/runtime-corejs2/core-js/date/now.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ "./node_modules/bootstrap/dist/css/bootstrap.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! file-saver */ "file-saver");
+/* harmony import */ var file_saver__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_12__);
+
+
+
 
 
 
@@ -430,32 +458,56 @@ var _jsxFileName = "/Users/atharva/Documents/UPB/jobtest/pages/index.js";
 
 
 
+var FileSaver = __webpack_require__(/*! file-saver */ "file-saver");
 
 var Index =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Index, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__["default"])(Index, _React$Component);
 
-  function Index() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Index);
+  function Index(props) {
+    var _this;
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Index).apply(this, arguments));
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Index);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Index).call(this, props));
+    _this.state = {
+      time: 0,
+      start: 0,
+      isOn: false,
+      clicks: 1,
+      currentTime: _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default()(),
+      laps: new Object()
+    };
+    _this.state.lapTime = setInterval(function () {
+      return _this.setState({
+        currentTime: _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default()()
+      });
+    }, 1);
+    console.log(new Date(_this.state.currentTime));
+    _this.startTimer = _this.startTimer.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
+    _this.stopTimer = _this.stopTimer.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
+    _this.resetTimer = _this.resetTimer.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
+    _this.lapTimer = _this.lapTimer.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
+    _this.export = _this.export.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
+    return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Index, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Index, [{
     key: "startTimer",
     value: function startTimer() {
-      var _this = this;
+      var _this2 = this;
 
       this.setState({
         time: this.state.time,
-        start: _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_0___default()() - this.state.time,
+        start: _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default()() - this.state.time,
         isOn: true,
-        clicks: 1
+        clicks: 1,
+        laptime: undefined
       });
-      this.timer = setInterval(function () {
-        return _this.setState({
-          time: _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_0___default()() - _this.state.start
+      this.state.lapTime = setInterval(function () {
+        return _this2.setState({
+          time: _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_2___default()() - _this2.state.start
         });
       }, 1);
     }
@@ -464,236 +516,159 @@ function (_React$Component) {
     value: function stopTimer() {
       this.setState({
         isOn: false,
-        clicks: 1
+        clicks: 1,
+        laps: new Object()
       });
-      clearInterval(this.timer);
+      clearInterval(this.state.lapTime);
     }
   }, {
     key: "resetTimer",
     value: function resetTimer() {
       this.setState({
-        time: 0
+        time: 0,
+        laps: new Object()
       });
     }
   }, {
     key: "lapTimer",
     value: function lapTimer() {
+      var laps = this.state.laps;
+
       if (this.state.clicks <= 5) {
+        var d = new Date(this.state.time);
+        var time = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + " " + d.getMilliseconds();
+        laps[this.state.clicks] = time;
         this.setState({
-          clicks: this.state.clicks + 1
+          clicks: this.state.clicks + 1,
+          laps: laps
         });
-        localStorage.setItem(this.state.clicks, this.state.time);
       }
     }
   }, {
-    key: "setTime",
-    value: function setTime() {
-      var currentdate = new Date();
-      var hours = currentdate.getUTCHours() + 2;
-
-      if (hours >= 24) {
-        hours -= 24;
-      }
-
-      if (hours < 0) {
-        hours += 12;
-      }
-
-      hours = hours + "";
-
-      if (hours.length == 1) {
-        hours = "0" + hours;
-      }
-
-      var minutes = currentdate.getUTCMinutes();
-      minutes = minutes + "";
-
-      if (minutes.length == 1) {
-        minutes = "0" + minutes;
-      }
-
-      var seconds = currentdate.getUTCSeconds(); //console.log(hours, minutes, seconds)
-
-      this.setState({
-        hours: hours,
-        minutes: minutes,
-        seconds: seconds,
-        time: 0,
-        start: 0,
-        isOn: false
+    key: "export",
+    value: function _export() {
+      var laps = this.state.laps;
+      console.log(laps);
+      var blob = new Blob([_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(this.state.laps)], {
+        type: "text/plain;charset=utf-8"
       });
+      FileSaver.saveAs(blob, "laps.json");
     }
   }, {
     key: "componentWillMount",
-    value: function componentWillMount() {
-      this.setTime();
-      /*window.setInterval(function () {
-          this.setTime();
-        }.bind(this), 1000);*/
-    }
+    value: function componentWillMount() {}
   }, {
     key: "componentDidMount",
-    value: function componentDidMount() {
-      this.setState({
-        time: 0,
-        start: 0,
-        isOn: false,
-        clicks: 1
-      });
-      this.startTimer = this.startTimer.bind(this);
-      this.stopTimer = this.stopTimer.bind(this);
-      this.resetTimer = this.resetTimer.bind(this);
-      this.lapTimer = this.lapTimer.bind(this);
-    }
+    value: function componentDidMount() {}
   }, {
     key: "render",
     value: function render() {
-      var start = this.state.time == 0 ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+      var _this3 = this;
+
+      var start = this.state.time == 0 ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         onClick: this.startTimer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 91
         },
         __self: this
       }, "start") : null;
-      var stop = this.state.isOn ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+      var stop = this.state.isOn ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         onClick: this.stopTimer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 94
         },
         __self: this
       }, "stop") : null;
-      var reset = this.state.time != 0 && !this.state.isOn ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+      var reset = this.state.time != 0 && !this.state.isOn ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         onClick: this.resetTimer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 97
         },
         __self: this
       }, "reset") : null;
-      var resume = this.state.time != 0 && !this.state.isOn ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+      var resume = this.state.time != 0 && !this.state.isOn ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         onClick: this.startTimer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 100
         },
         __self: this
       }, "resume") : null;
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
+      var d = new Date(this.state.currentTime);
+      var currentTime = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + " " + d.getMilliseconds();
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Container"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 110
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         color: "primary",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 111
+        },
+        __self: this
+      }, "Timer Project"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h3", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 112
         },
         __self: this
-      }, "Timer Project"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, "timer: ", this.state.time), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 113
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 116
-        },
-        __self: this
-      }, "Real - Time : "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_live_clock__WEBPACK_IMPORTED_MODULE_10___default.a, {
-        format: 'HH:mm:ss',
-        ticking: true,
-        timezone: 'Europe/Berlin',
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 117
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h3", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 121
-        },
-        __self: this
-      }, "timer: ", pretty_ms__WEBPACK_IMPORTED_MODULE_9___default()(this.state.time)), start, resume, stop, reset, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+      }, "Current Time : ", currentTime), "\xA0\xA0\xA0", start, "\xA0\xA0\xA0", resume, " \xA0\xA0\xA0", stop, " \xA0\xA0\xA0", reset, " \xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         color: "primary",
         onClick: this.lapTimer,
+        disabled: this.state.time == 0 || this.state.clicks == 6,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 118
         },
         __self: this
-      }, "Lap"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+      }, "Lap"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+        color: "primary",
+        onClick: this.export,
+        disabled: this.state.clicks == 1,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 119
         },
         __self: this
-      }, localStorage.getItem(1)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 127
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 128
-        },
-        __self: this
-      }, localStorage.getItem(2)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 128
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 129
-        },
-        __self: this
-      }, localStorage.getItem(3)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 129
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 130
-        },
-        __self: this
-      }, localStorage.getItem(4)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 130
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 131
-        },
-        __self: this
-      }, localStorage.getItem(5)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 131
-        },
-        __self: this
-      }));
+      }, "Export"), "\xA0\xA0\xA0", _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(this.state.laps).map(function (item, i) {
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+          key: item,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 121
+          },
+          __self: this
+        }, item, ": ", _this3.state.laps[item]);
+      })));
     }
   }]);
 
   return Index;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_9___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
@@ -719,6 +694,17 @@ module.exports = __webpack_require__(/*! /Users/atharva/Documents/UPB/jobtest/pa
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/date/now");
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/json/stringify" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 
@@ -755,6 +741,17 @@ module.exports = require("core-js/library/fn/object/get-prototype-of");
 
 /***/ }),
 
+/***/ "core-js/library/fn/object/keys":
+/*!*************************************************!*\
+  !*** external "core-js/library/fn/object/keys" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/keys");
+
+/***/ }),
+
 /***/ "core-js/library/fn/object/set-prototype-of":
 /*!*************************************************************!*\
   !*** external "core-js/library/fn/object/set-prototype-of" ***!
@@ -788,14 +785,14 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 
 /***/ }),
 
-/***/ "pretty-ms":
-/*!****************************!*\
-  !*** external "pretty-ms" ***!
-  \****************************/
+/***/ "file-saver":
+/*!*****************************!*\
+  !*** external "file-saver" ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("pretty-ms");
+module.exports = require("file-saver");
 
 /***/ }),
 
@@ -807,17 +804,6 @@ module.exports = require("pretty-ms");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
-
-/***/ }),
-
-/***/ "react-live-clock":
-/*!***********************************!*\
-  !*** external "react-live-clock" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-live-clock");
 
 /***/ }),
 

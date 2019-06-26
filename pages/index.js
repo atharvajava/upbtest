@@ -1,91 +1,84 @@
 import React  from 'react';
-import { Button } from 'reactstrap';
+import { Button , Container} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import ms from "pretty-ms";
-import Clock from 'react-live-clock';
+import { saveAs } from 'file-saver';
+
+var FileSaver = require('file-saver');
 
 class Index extends React.Component {
+  
 
+    constructor(props) {
+        super(props)
+        this.state =  {
+            time: 0,
+            start: 0,
+            isOn: false,
+            clicks:1,
+            currentTime:Date.now(),
+            laps:new Object()
+        }
+        this.state.lapTime= setInterval(() => this.setState({
+            currentTime: Date.now()
+          }), 1);
+        
+        console.log(new Date(this.state.currentTime))
+        this.startTimer = this.startTimer.bind(this)
+        this.stopTimer = this.stopTimer.bind(this)
+        this.resetTimer = this.resetTimer.bind(this)
+        this.lapTimer = this.lapTimer.bind(this)
+        this.export = this.export.bind(this)
+        
+    }
 
     startTimer() {
         this.setState({
             time: this.state.time,
             start: Date.now() - this.state.time,
             isOn: true,
-            clicks:1
+            clicks:1,
+            laptime:undefined
         })
-        this.timer = setInterval(() => this.setState({
-          time: Date.now() - this.state.start
+        this.state.lapTime= setInterval(() => this.setState({
+          time: Date.now() - this.state.start,
         }), 1);
       }
 
 
       stopTimer() {
-        this.setState({isOn: false,clicks:1})
-        clearInterval(this.timer)
+        this.setState({isOn: false,clicks:1, laps:new Object()})
+        clearInterval(this.state.lapTime)
       }
 
       resetTimer() {
-        this.setState({time: 0})
+        this.setState({time: 0, laps:new Object()})
       }
 
       lapTimer() {
+        let laps = this.state.laps;
         if(this.state.clicks<= 5) {
-           this.setState({clicks: this.state.clicks+1})
-           localStorage.setItem(this.state.clicks,this.state.time)
+            let d = new Date(this.state.time)
+            let time = d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate() + 
+                   " "+ d.getHours()+":"+d.getMinutes()+":"+
+                   d.getSeconds()+" "+d.getMilliseconds();
+           laps[this.state.clicks]=time;
+           this.setState({clicks: this.state.clicks+1 , laps:laps})
         }
       }
 
-
-    setTime(){
-  
-        let currentdate = new Date();
-        let hours = currentdate.getUTCHours()+2    
-      
-          
-          if( hours >= 24 ){ hours -= 24; }
-          if( hours < 0   ){ hours += 12; }
-    
-          hours = hours + "";
-          if( hours.length == 1 ){ hours = "0" + hours; }
-    
-          
-          let minutes = currentdate.getUTCMinutes();
-    
-          
-          minutes = minutes + "";
-          if( minutes.length == 1 ){ minutes = "0" + minutes; }
-    
-          let seconds = currentdate.getUTCSeconds();
-          //console.log(hours, minutes, seconds)
-          this.setState({
-            hours: hours,
-            minutes: minutes,
-            seconds: seconds,
-            time: 0,
-            start: 0,
-            isOn: false
-          });
+      export() {
+        let laps = this.state.laps;
+        console.log(laps)
+        var blob = new Blob([JSON.stringify(this.state.laps)], {type: "text/plain;charset=utf-8"});
+        FileSaver.saveAs(blob, "laps.json");
       }
 
       componentWillMount(){
-        this.setTime();
-        /*window.setInterval(function () {
-            this.setTime();
-          }.bind(this), 1000);*/
+        
       }
 
       componentDidMount(){
-        this.setState({
-            time: 0,
-            start: 0,
-            isOn: false,
-            clicks:1,
-          });
-       this.startTimer = this.startTimer.bind(this)
-        this.stopTimer = this.stopTimer.bind(this)
-        this.resetTimer = this.resetTimer.bind(this)
-        this.lapTimer = this.lapTimer.bind(this)
+       
      }
 
     
@@ -107,28 +100,28 @@ class Index extends React.Component {
       <Button onClick={this.startTimer}>resume</Button> :
       null
 
-        return (<React.Fragment>
-            
-            <Button color="primary"  >Timer Project</Button>
-            
-            
-            <div >
-                <label>Real - Time : </label>
-                <Clock format={'HH:mm:ss'} ticking={true} timezone={'Europe/Berlin'} />
-            </div>
-            
+      let d = new Date(this.state.currentTime)
+      let currentTime = d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate() + 
+             " "+ d.getHours()+":"+d.getMinutes()+":"+
+             d.getSeconds()+" "+d.getMilliseconds();
 
-            <h3>timer: {ms(this.state.time)}</h3>
-            {start}
-            {resume}
-            {stop}
-            {reset}
-            <Button color="primary"  onClick={this.lapTimer}>Lap</Button>
-            <span>{localStorage.getItem(1)}</span><br/>
-            <span>{localStorage.getItem(2)}</span><br/>
-            <span>{localStorage.getItem(3)}</span><br/>
-            <span>{localStorage.getItem(4)}</span><br/>
-            <span>{localStorage.getItem(5)}</span><br/>
+        return (<React.Fragment>
+            <Container>
+                <br/>
+            <Button color="primary"  >Timer Project</Button>
+            <h3>timer: {this.state.time}</h3>
+            <h3>Current Time : {currentTime}</h3>
+            &nbsp;&nbsp;&nbsp;{start}&nbsp;&nbsp;&nbsp;
+            {resume} &nbsp;&nbsp;&nbsp;
+            {stop} &nbsp;&nbsp;&nbsp;
+            {reset} &nbsp;&nbsp;&nbsp;
+            <Button color="primary"  onClick={this.lapTimer} disabled={this.state.time==0 || this.state.clicks==6}>Lap</Button>
+            <Button color="primary" onClick={this.export} disabled={this.state.clicks==1}>Export</Button>
+            &nbsp;&nbsp;&nbsp;{Object.keys(this.state.laps).map((item,i)=>(
+            <p key={item}>{item}: {this.state.laps[item ]}</p>)
+            )}
+            </Container>
+            
         </React.Fragment>)
     }
 }
